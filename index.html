@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação do 4º Congresso Internacional de Teologia</title>
+  <style>
+    :root {
+      --cor-principal: #1f3a5f;
+      --cor-destaque: #b08d57;
+      --fundo: #f4f1ea;
+      --texto: #222;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--cor-principal);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 5px solid var(--cor-destaque);
+    }
+    header h1 { margin: 0 0 8px; font-size: 1.8rem; }
+    header p { margin: 4px 0; font-size: 1rem; opacity: .9; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 60px; }
+    .intro {
+      background: #fff;
+      border-left: 5px solid var(--cor-destaque);
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      border-radius: 6px;
+    }
+    .intro p { margin: 0 0 10px; }
+    .intro p:last-child { margin-bottom: 0; }
+    fieldset {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 0 0 16px;
+    }
+    legend {
+      font-weight: bold;
+      color: var(--cor-principal);
+      padding: 0 8px;
+    }
+    .opcoes { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 6px; }
+    .opcoes label { cursor: pointer; display: flex; align-items: center; gap: 6px; }
+    input[type="radio"] { accent-color: var(--cor-principal); width: 18px; height: 18px; }
+    textarea {
+      width: 100%;
+      font: inherit;
+      padding: 10px;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+      resize: vertical;
+    }
+    textarea:focus {
+      outline: 2px solid var(--cor-destaque);
+      border-color: var(--cor-destaque);
+    }
+    button {
+      display: block;
+      width: 100%;
+      background: var(--cor-principal);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      font-size: 1.1rem;
+      font-family: inherit;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 24px;
+    }
+    button:hover { background: #162b47; }
+    #agradecimento {
+      display: none;
+      background: #fff;
+      border-left: 5px solid var(--cor-destaque);
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 6px;
+    }
+    #agradecimento h2 { color: var(--cor-principal); margin-top: 0; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Avaliação do 4º Congresso Internacional de Teologia</h1>
+    <p>19 a 22 de outubro de 2026</p>
+    <p><strong>Sua opinião é muito importante para nós!</strong></p>
+  </header>
+
+  <main>
+
+    <div class="intro">
+      <p>A FATIPI agradece sua participação no 4º Congresso Internacional de Teologia, que teve como tema <em>“Teologia Sistemática: Confissão que pensa, Igreja que serve, Esperança que permanece”</em>.</p>
+      <p>Queremos conhecer sua experiência para aprimorar nossas próximas edições. Sua avaliação é muito importante e levará apenas alguns minutos.</p>
+    </div>
+
+    <form id="formulario" action="#" method="post">
+
+      <!-- 1 -->
+      <fieldset>
+        <legend>1. Como você participou do Congresso?</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="modalidade" value="Presencialmente" required> Presencialmente</label>
+          <label><input type="radio" name="modalidade" value="Online"> Online</label>
+          <label><input type="radio" name="modalidade" value="Nas duas modalidades"> Nas duas modalidades</label>
+        </div>
+      </fieldset>
+
+      <!-- 2 -->
+      <fieldset>
+        <legend>2. Como você avalia a palestra central do Congresso?</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="palestra_central" value="Ótimo" required> Ótimo</label>
+          <label><input type="radio" name="palestra_central" value="Bom"> Bom</label>
+          <label><input type="radio" name="palestra_central" value="Regular"> Regular</label>
+          <label><input type="radio" name="palestra_central" value="Ruim"> Ruim</label>
+        </div>
+      </fieldset>
+
+      <!-- 3 -->
+      <fieldset>
+        <legend>3. Como você avalia os temas e conteúdos abordados nas oficinas?</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="conteudo_oficinas" value="Ótimo" required> Ótimo</label>
+          <label><input type="radio" name="conteudo_oficinas" value="Bom"> Bom</label>
+          <label><input type="radio" name="conteudo_oficinas" value="Regular"> Regular</label>
+          <label><input type="radio" name="conteudo_oficinas" value="Ruim"> Ruim</label>
+        </div>
+      </fieldset>
+
+      <!-- 4 -->
+      <fieldset>
+        <legend>4. Como você avalia os professores e palestrantes?</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="palestrantes" value="Ótimo" required> Ótimo</label>
+          <label><input type="radio" name="palestrantes" value="Bom"> Bom</label>
+          <label><input type="radio" name="palestrantes" value="Regular"> Regular</label>
+          <label><input type="radio" name="palestrantes" value="Ruim"> Ruim</label>
+        </div>
+      </fieldset>
+
+      <!-- 5 -->
+      <fieldset>
+        <legend>5. O que achou dos horários das oficinas?</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="horarios_oficinas" value="Ótimo" required> Ótimo</label>
+          <label><input type="radio" name="horarios_oficinas" value="Bom"> Bom</label>
+          <label><input type="radio" name="horarios_oficinas" value="Regular"> Regular</label>
+          <label><input type="radio" name="horarios_oficinas" value="Ruim"> Ruim</label>
+          <label><input type="radio" name="horarios_oficinas" value="Não participei"> Não participei</label>
+        </div>
+      </fieldset>
+
+      <!-- 6 -->
+      <fieldset>
+        <legend>6. Como você avalia a organização geral do evento?</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="organizacao" value="Ótimo" required> Ótimo</label>
+          <label><input type="radio" name="organizacao" value="Bom"> Bom</label>
+          <label><input type="radio" name="organizacao" value="Regular"> Regular</label>
+          <label><input type="radio" name="organizacao" value="Ruim"> Ruim</label>
+        </div>
+      </fieldset>
+
+      <!-- 7 -->
+      <fieldset>
+        <legend>7. Qual é a sua avaliação geral do 4º Congresso Internacional de Teologia?</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="avaliacao_geral" value="Ótimo" required> Ótimo</label>
+          <label><input type="radio" name="avaliacao_geral" value="Bom"> Bom</label>
+          <label><input type="radio" name="avaliacao_geral" value="Regular"> Regular</label>
+          <label><input type="radio" name="avaliacao_geral" value="Ruim"> Ruim</label>
+        </div>
+      </fieldset>
+
+      <!-- 8 -->
+      <fieldset>
+        <legend>8. Como você avalia a qualidade da transmissão online (imagem e som)?</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="transmissao" value="Ótimo" required> Ótimo</label>
+          <label><input type="radio" name="transmissao" value="Bom"> Bom</label>
+          <label><input type="radio" name="transmissao" value="Regular"> Regular</label>
+          <label><input type="radio" name="transmissao" value="Ruim"> Ruim</label>
+          <label><input type="radio" name="transmissao" value="Não participei"> Não participei</label>
+        </div>
+      </fieldset>
+
+      <!-- 9 -->
+      <fieldset>
+        <legend>9. Como você avalia o serviço de tradução simultânea?</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="traducao" value="Ótimo" required> Ótimo</label>
+          <label><input type="radio" name="traducao" value="Bom"> Bom</label>
+          <label><input type="radio" name="traducao" value="Regular"> Regular</label>
+          <label><input type="radio" name="traducao" value="Ruim"> Ruim</label>
+          <label><input type="radio" name="traducao" value="Não participei"> Não participei</label>
+        </div>
+      </fieldset>
+
+      <!-- 10 -->
+      <fieldset>
+        <legend>10. Você participaria de uma próxima edição do Congresso?</legend>
+        <div class="opcoes">
+          <label><input type="radio" name="proxima_edicao" value="Sim" required> Sim</label>
+          <label><input type="radio" name="proxima_edicao" value="Talvez"> Talvez</label>
+          <label><input type="radio" name="proxima_edicao" value="Não"> Não</label>
+        </div>
+      </fieldset>
+
+      <!-- 11 -->
+      <fieldset>
+        <legend>11. Quais temas você gostaria que fossem abordados nas próximas edições do Congresso Internacional de Teologia?</legend>
+        <textarea name="temas_sugeridos" rows="4" placeholder="Escreva aqui suas sugestões de temas..."></textarea>
+      </fieldset>
+
+      <!-- 12 -->
+      <fieldset>
+        <legend>12. Deixe seus comentários, sugestões ou críticas.</legend>
+        <textarea name="comentarios" rows="5" placeholder="Escreva aqui seus comentários..."></textarea>
+      </fieldset>
+
+      <button type="submit">Enviar avaliação</button>
+
+    </form>
+
+    <div id="agradecimento">
+      <h2>Obrigado pela sua avaliação!</h2>
+      <p>Sua opinião nos ajudará a aprimorar as próximas edições do Congresso Internacional de Teologia.</p>
+      <p><strong>FATIPI</strong></p>
+    </div>
+
+  </main>
+
+  <script>
+    // Cole aqui a URL do aplicativo da Web gerada pelo Google Apps Script
+    // (veja o passo a passo no arquivo google-apps-script.gs).
+    const URL_SCRIPT = 'https://script.google.com/macros/s/AKfycbwuhTKSq8CDXtn6ggIg9gYpkHevIY2PTWMNk-pw2leAfYVpurqbzwF1kDu1iHokVMM/exec';
+
+    const formulario = document.getElementById('formulario');
+    const agradecimento = document.getElementById('agradecimento');
+    const botao = formulario.querySelector('button[type="submit"]');
+
+    formulario.addEventListener('submit', async function (evento) {
+      evento.preventDefault();
+
+      if (URL_SCRIPT.startsWith('COLE_AQUI')) {
+        alert('Configuração pendente: informe a URL do Apps Script no arquivo HTML.');
+        return;
+      }
+
+      botao.disabled = true;
+      botao.textContent = 'Enviando...';
+
+      try {
+        const dados = new URLSearchParams(new FormData(formulario));
+        await fetch(URL_SCRIPT, { method: 'POST', mode: 'no-cors', body: dados });
+
+        formulario.style.display = 'none';
+        agradecimento.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (erro) {
+        botao.disabled = false;
+        botao.textContent = 'Enviar avaliação';
+        alert('Não foi possível enviar agora. Verifique sua conexão e tente novamente.');
+      }
+    });
+  </script>
+
+</body>
+</html>
